@@ -114,6 +114,9 @@ module.exports = function(grunt) {
     scope: ['devDependencies', 'dependencies']
   });
   
+  // To get 'version', i.e. required to work on SEED™: Grunt based build system.
+  var version = process.env.VERSION || require('./package.json').version;
+  
   // A task to clean build(s) or Temporary file(s) and default cache directories.
   grunt.registerTask('clear', ['clean']);
   
