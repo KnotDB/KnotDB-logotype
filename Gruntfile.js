@@ -152,3 +152,5 @@ module.exports = function(grunt) {
   
   // A Default Task is basically a rebuild.
   grunt.registerTask('default', ['clear', 'build', 'script', 'connect', 'watch']);
+
+};
