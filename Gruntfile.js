@@ -100,3 +100,9 @@ module.exports = function(grunt) {
   /// Loading all the tasks options in tasks/options base on the name:
   /// compass.js => compass{}
   grunt.util._.extend(config, loadConfig('./tasks/options/'));
+  
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  // Project configuration for -//KnotDB®-logotype//- Build.
+  // Date: 29-11-2016.
+  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  grunt.initConfig(config);
