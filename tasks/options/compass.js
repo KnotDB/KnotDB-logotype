@@ -28,3 +28,27 @@
  * --/The Heart of Build System/-- of "KnotDB®-logotype".
  * ___________________________________________________________________________
  */
+
+module.exports = {
+  compass: {
+    // T:1
+    dist: {
+      options: {
+        // Requires OS to have Ruby, Sass, and Compass >=1.0.1 installed.
+        config: __dirname + 'config.rb',
+        environment: 'production',
+        raw: 'preferred_syntax = :scss\n' // Use `raw` since it's not directly available.
+      }
+    },
+    // T:2
+    dev: {
+      options: {
+        assetCacheBuster: true,
+        fontsPath: './core/source/font',
+        sassDir: './core/source/scss',
+        cssDir: './app/en/assets/style',
+        sourcemap: true
+      }
+    }
+  }
+};
