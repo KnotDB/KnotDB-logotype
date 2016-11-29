@@ -28,3 +28,17 @@
  * --/The Heart of Build System/-- of "KnotDB®-logotype".
  * ___________________________________________________________________________
  */
+
+module.exports = {
+  // before generating any new files, remove any previously-created files.
+  tests: ['.sass-cache', 'tmp', '*.temp', '*.log'],
+  // will delete files for `build` target.
+  build: ['build'],
+  // Will NOT delete files for `release` target.
+  release: {
+    options: {
+      'no-write': true
+    },
+    src: ['app']
+  }
+};
