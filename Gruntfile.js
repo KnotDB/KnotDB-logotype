@@ -122,3 +122,7 @@ module.exports = function(grunt) {
   
   // A task to build JavaScript, also to Lint, concatenate and Minify.
   grunt.registerTask('script', ['jshint', 'concat', 'uglify']);
+  
+  // A task to serve KnotDB®-LogoType.
+  // on to default browser.
+  grunt.registerTask('serve', ['connect', 'watch']);
