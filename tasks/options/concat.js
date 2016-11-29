@@ -28,3 +28,21 @@
  * --/The Heart of Build System/-- of "KnotDB®-logotype".
  * ___________________________________________________________________________
  */
+
+module.exports = {
+  dist: {
+    options: {
+      separator: ';\n',
+      // Replace all 'use strict' statements in the code with a single one at the top.
+      banner: "'use strict';\n",
+      process: function(src, filepath) {
+        return '// Source: ' + filepath + '\n' + src.replace(/(^|\n)[ \t]*('use strict'|"use strict");?\s*/g, '$1');
+      }
+    },
+    files: {
+      // compiled JavaScript for — intermediate work.
+      // ./app/en/assets/script/knotdb-logotype-0.0.1.js
+      './app/en/assets/script/<%= pkg.name %>-<%= pkg.version %>.js': ['./core/source/script/**/*.js']
+    }
+  }
+};
