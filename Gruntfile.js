@@ -116,3 +116,6 @@ module.exports = function(grunt) {
   
   // A task to clean build(s) or Temporary file(s) and default cache directories.
   grunt.registerTask('clear', ['clean']);
+  
+  // A task to build HTML and SCSS, also to Lint and Minify.
+  grunt.registerTask('build', ['htmlhint', 'compass', 'scsslint', 'csslint', 'cssmin']);
