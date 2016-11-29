@@ -119,3 +119,6 @@ module.exports = function(grunt) {
   
   // A task to build HTML and SCSS, also to Lint and Minify.
   grunt.registerTask('build', ['htmlhint', 'compass', 'scsslint', 'csslint', 'cssmin']);
+  
+  // A task to build JavaScript, also to Lint, concatenate and Minify.
+  grunt.registerTask('script', ['jshint', 'concat', 'uglify']);
