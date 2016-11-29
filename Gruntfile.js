@@ -113,3 +113,6 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt, {
     scope: ['devDependencies', 'dependencies']
   });
+  
+  // A task to clean build(s) or Temporary file(s) and default cache directories.
+  grunt.registerTask('clear', ['clean']);
