@@ -28,3 +28,17 @@
  * --/The Heart of Build System/-- of "KnotDB®-logotype".
  * ___________________________________________________________________________
  */
+
+module.exports = {
+  options: {
+    shorthandCompacting: false,
+    roundingPrecision: -1
+  },
+  target: {
+    files: {
+      // 1. for LogoType and 2. for KnotDB®-Logo.
+      './app/en/assets/style/logotype.min.css': ['./app/en/assets/style/normalize.css', './app/en/assets/style/logotype.css'],
+      './app/en/assets/style/knotdb.min.css': ['./app/en/assets/style/normalize.css', './app/en/assets/style/knotdb-logo.css'],
+    }
+  }
+};
