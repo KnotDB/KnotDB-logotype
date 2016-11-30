@@ -44,7 +44,7 @@ module.exports = {
   my_target: {
     options: {
       sourceMap: true,
-      sourceMapName: './app/en/assets/script/index.js.map'
+      sourceMapName: './app/en/assets/script/<%= pkg.name %>-<%= pkg.version %>.js.map'
     },
     files: {
       // Outfile: ———— ./app/en/assets/script/knotdb-logotype-0.0.1.min.js
