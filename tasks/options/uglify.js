@@ -28,3 +28,27 @@
  * --/The Heart of Build System/-- of "KnotDB®-logotype".
  * ___________________________________________________________________________
  */
+
+module.exports = {
+  options: {
+    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - author: <%= pkg.author %> - ' + '<%= grunt.template.today("yyyy-mm-dd") %> */',
+    compress: {
+      warnings: false
+    },
+    mangle: {
+      // Specify [mangle: false] to prevent changes to your variable and function names,
+      // Or, to leave untouched with an except array in the mangle options.
+      except: ['jQuery', 'Modernizr']
+    }
+  },
+  my_target: {
+    options: {
+      sourceMap: true,
+      sourceMapName: './app/en/assets/script/index.js.map'
+    },
+    files: {
+      // Outfile: ———— ./app/en/assets/script/knotdb-logotype-0.0.1.min.js
+      './app/en/assets/script/<%= pkg.name %>-<%= pkg.version %>.min.js': ['./app/en/assets/script/<%= pkg.name %>-<%= pkg.version %>.js']
+    }
+  }
+};
