@@ -28,3 +28,6 @@
  * --/The Heart of Build System/-- of "KnotDB®-logotype".
  * ___________________________________________________________________________
  */
+
+// To update '.csslintrc' list, run this:
+// node -e "require('csslint').CSSLint.getRules().forEach(function(x) { console.log(x.id) })".
