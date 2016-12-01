@@ -28,3 +28,19 @@
  * --/The Heart of Build System/-- of "KnotDB®-logotype".
  * ___________________________________________________________________________
  */
+
+module.exports = {
+  // Application Path Defined.
+  var appsPath = './app/';
+  server: {
+    options: {
+      port: 9002,
+      base: appsPath,
+      keepalive: true,
+      open: {
+        target: 'http://localhost:9002',
+        maxAge: 300000
+      }
+    }
+  }
+};
